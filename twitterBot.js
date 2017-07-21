@@ -5,11 +5,18 @@ const theBot = new Twit({
   ...config
 });
 
-const stream = theBot.stream('statuses/filter', { track: 'unicorn jscc17' });
+const stream = theBot.stream('statuses/filter', { track: 'jscc17' });
 
 stream.on("tweet", handleTweet);
 
 function handleTweet(tweet) {
-  const status = "I saw a unicorn at #jscc17";
-  theBot.post('statuses/update', { status: status }, console.log);
+  const sender = tweet.user.screen_name;
+  const status = `Thanks for tweeting to #jscc17 @${sender}. Balls galore!`;
+
+  if(sender !== "twbot8") {
+    console.log("tweeting:", status)
+    theBot.post('statuses/update', { status, in_reply_to_status_id: tweet.id_str });
+  } else {
+    console.log("found my own tweet...");
+  }
 }
