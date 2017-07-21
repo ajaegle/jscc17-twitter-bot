@@ -18,4 +18,6 @@ How to run?
    - TWITTER_CONSUMER_SECRET=
    - TWITTER_ACCESS_TOKEN=
    - TWITTER_ACCESS_TOKEN_SECRET=
-2. npm start or docker run
+2. set the name of your twitter bot (user handle)
+   - TWITTER_BOT_USER=
+3. npm start or docker run
