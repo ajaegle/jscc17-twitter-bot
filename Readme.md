@@ -10,3 +10,12 @@ Create a twitter bot for #jscc17 tweets.
 3. Make a small `console.log` with the stream API of `twit`.
 4. With theBot.post() we can send a status
    * Be aware that duplications of statusses are not allowed :)
+
+How to run?
+
+1. Set your twitter credentials as environment variables
+   - TWITTER_CONSUMER_KEY=
+   - TWITTER_CONSUMER_SECRET=
+   - TWITTER_ACCESS_TOKEN=
+   - TWITTER_ACCESS_TOKEN_SECRET=
+2. npm start or docker run
