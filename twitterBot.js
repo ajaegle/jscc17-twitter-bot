@@ -19,7 +19,7 @@ stream.on("tweet", handleTweet);
 
 function handleTweet(tweet) {
   const sender = tweet.user.screen_name;
-  const status = `Thanks for tweeting to #jscc17 @${sender}. Balls galore!`;
+  const status = `@${sender} thanks for tweeting to #jscc17. Balls galore!`;
 
   if(sender !== botUser) {
     console.log("tweeting:", status)
